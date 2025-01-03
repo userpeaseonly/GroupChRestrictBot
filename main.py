@@ -6,12 +6,16 @@ from telegram.ext import (
     ContextTypes,
     CommandHandler,
 )
-import asyncio
+import dotenv
+import os
+
+# Load environment variables
+dotenv.load_dotenv()
 
 # Replace with your Bot Token, Group ID, and Channel Link
-BOT_TOKEN = "yourtoken"  # Replace with your bot token
-GROUP_ID = -1002492230000  # Replace with your group ID
-CHANNEL_USERNAME = "yourchannelusername"  # Channel username without 't.me/'
+BOT_TOKEN = os.getenv("BOT_TOKEN") # Bot Token
+GROUP_ID = os.getenv("GROUP_ID") # Group ID where the bot is added
+CHANNEL_USERNAME = os.getenv("CHANNEL_USERNAME")  # Channel username without 't.me/'
 
 bot = Bot(BOT_TOKEN)
 
