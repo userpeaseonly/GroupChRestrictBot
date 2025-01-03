@@ -17,6 +17,10 @@ BOT_TOKEN = os.getenv("BOT_TOKEN") # Bot Token
 GROUP_ID = os.getenv("GROUP_ID") # Group ID where the bot is added
 CHANNEL_USERNAME = os.getenv("CHANNEL_USERNAME")  # Channel username without 't.me/'
 
+print(f"Bot Token = {BOT_TOKEN}")
+print(f"Group ID = {GROUP_ID}")
+print(f"Channel Username = {CHANNEL_USERNAME}")
+
 bot = Bot(BOT_TOKEN)
 
 # Dictionary to track active users
